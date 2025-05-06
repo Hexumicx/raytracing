@@ -1,1 +1,1 @@
-Simple Raytracer from RayTracingInOneWeekend
+Simple Raytracer
