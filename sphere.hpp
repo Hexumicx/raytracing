@@ -4,6 +4,8 @@
 #include "hittable.hpp"
 #include "vec3.hpp"
 
+class material;
+
 class sphere : public hittable{
     public:
         sphere(const point3 &center, double radius, shared_ptr<material> mat) : center(center), radius(std::fmax(0, radius)), mat(mat) {}

@@ -1,9 +1,14 @@
 #ifndef MATERIAL_HPP
 #define MATERIAL_HPP
 
-#include "hittable.hpp"
+#include <cmath>
+
+#include "vec3.hpp"
+#include "utils.hpp"
 #include "color.hpp"
-#include "ray.hpp"
+
+class hit_record;
+class ray;
 
 class material { 
     public:
@@ -16,7 +21,7 @@ class material {
 
 class lambertian : public material {
     public:
-        lambertian(const color& alberdo) : albedo(alberdo) {}
+        lambertian(const color& albedo) : albedo(albedo) {}
 
         bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered) const override {
             auto scatter_direction = rec.normal + random_unit_vector();

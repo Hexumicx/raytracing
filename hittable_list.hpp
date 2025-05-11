@@ -1,10 +1,10 @@
 #ifndef HITTABLE_LIST_HPP
 #define HITTABLE_LIST_HPP
 
-#include "hittable.hpp"
-
 #include <memory>
 #include <vector>
+
+#include "hittable.hpp"
 
 using std::make_shared;
 using std::shared_ptr;

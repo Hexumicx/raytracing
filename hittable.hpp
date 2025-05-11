@@ -1,9 +1,10 @@
 #ifndef HITTABLE_HPP
 #define HITTABLE_HPP
 
-#include "ray.hpp"
+#include "vec3.hpp"
 
 class material;
+class ray;
 
 class hit_record {
     public:
@@ -25,4 +26,5 @@ class hittable {
 
         virtual bool hit(const ray& r, interval ray_t, hit_record& rec) const = 0;
 };
+
 #endif // HITTABLE_HPP

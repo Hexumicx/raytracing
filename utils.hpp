@@ -1,9 +1,9 @@
 #ifndef UTILS_HPP
 #define UTILS_HPP
 
-#include "constants.hpp"
-
 #include <cstdlib>
+
+#include "constants.hpp"
 
 inline double degrees_to_radians(double degrees) {
     return degrees * pi / 180.0;

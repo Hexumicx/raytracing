@@ -8,7 +8,7 @@ class interval {
         double min;
         double max;
 
-        interval() : min(+infinity), max(-infinity) {} // TODO: infinity
+        interval() : min(+infinity), max(-infinity) {}
 
         interval(double min, double max) : min(min), max(max) {}
 
