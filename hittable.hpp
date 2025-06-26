@@ -1,6 +1,7 @@
 #ifndef HITTABLE_HPP
 #define HITTABLE_HPP
 
+#include <memory>
 #include "vec3.hpp"
 
 class material;
@@ -12,7 +13,7 @@ class hit_record {
         vec3 normal;
         double t;   
         bool front_face;
-        shared_ptr<material> mat;
+        std::shared_ptr<material> mat;
 
         void set_face_normal(const ray& r, const vec3& outward_normal) {
             front_face = dot(r.direction(), outward_normal) < 0;
